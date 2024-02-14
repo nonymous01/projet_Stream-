@@ -1,0 +1,29 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="mess">
+        <div class="form">
+            {% if messages %}
+            <div class="error">
+                {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+            </div>
+            {% endif %}
+            <form action="{% url 'inscription' %}" method="post">
+                {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

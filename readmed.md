@@ -3,7 +3,12 @@ PROJET STREAM
 PAGE 1
     -AUTHENTIFICATION
         °INSCRIPTION (/inscription) inscription.html
+            -username
+            -email
+            -mot de passe
         °CONNEXION (/connexion) connexion.html
+            -email
+            -mot de passe
         °DECONNEXION (/deconnexion) deconnexion.html
 
     -ACCEUIL (index.html)

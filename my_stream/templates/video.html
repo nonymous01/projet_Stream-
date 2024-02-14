@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="video">
+        {% for video in videos %}
+        <video width="320" height="240" controls>
+            <source src="{{ video.video.url }}" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise video.
+        </video>
+        <video src="{{video.video.url}}" height="160px" alt="{{ video.name_video }}">
+        {% endfor %}
+    </div>
+</body>
+</html>
